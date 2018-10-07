@@ -7,6 +7,10 @@ import math
 from time import sleep
 import sys
 
+f = open(".credentials", "r")
+USERNAME = f.readline()
+PASSWORD= f.readline()
+
 # we check number of arguments
 if(len(sys.argv) < 2):
     print("You need to specify target username!")
@@ -37,8 +41,8 @@ sleep(0.8)
 # loggin into instagram
 user_name=browser.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[1]/div/div[1]/input')
 password=browser.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[2]/div/div[1]/input')
-user_name.send_keys('benogorjanc')
-password.send_keys('#Be03Ti00!Nosa2709')
+user_name.send_keys(USERNAME)
+password.send_keys(PASSWORD)
 browser.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/span[1]/button').click()
 
 sleep(1)

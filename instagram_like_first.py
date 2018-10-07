@@ -13,7 +13,8 @@ f = open(".credentials", "r")
 USERNAME = f.readline()
 PASSWORD= f.readline()
 
-TARGETS = ["tilenkocjan"]
+#list of target usernames
+TARGETS = []
 
 def like_pic(username):
     browser.get("https://www.instagram.com/" + username + "/")
